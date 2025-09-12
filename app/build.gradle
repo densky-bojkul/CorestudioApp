@@ -1,14 +1,13 @@
 plugins {
     id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
 }
 
 android {
-    namespace "com.nunucore.corearsitek"
+    namespace "com.nunucore.corestudio"
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.nunucore.corearsitek"
+        applicationId "com.nunucore.corestudio"
         minSdk 23
         targetSdk 34
         versionCode 1
@@ -19,7 +18,7 @@ android {
 
     signingConfigs {
         release {
-            storeFile file("$rootDir/app/corearsitek-key.jks")
+            storeFile file("$rootDir/app/corestudio.jks")
             storePassword System.getenv("MYAPP_UPLOAD_STORE_PASSWORD")
             keyAlias System.getenv("MYAPP_UPLOAD_KEY_ALIAS")
             keyPassword System.getenv("MYAPP_UPLOAD_KEY_PASSWORD")
