@@ -9,7 +9,7 @@
         android:id="@+id/logo"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/corestudio_icon"
+        android:src="@drawable/corestudio_icon_padded"
         android:contentDescription="@string/app_name"
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"
@@ -19,6 +19,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintWidth_percent="0.8"
         app:layout_constraintHeight_percent="0.4"/>
-        <!-- max 80% dari lebar layar & 40% dari tinggi layar -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
