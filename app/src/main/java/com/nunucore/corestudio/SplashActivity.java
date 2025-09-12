@@ -1,4 +1,4 @@
-package com.corestudio;
+package com.nunucore.corestudio;
 
 import android.content.Intent;
 import android.os.Bundle;
