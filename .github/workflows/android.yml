@@ -3,8 +3,6 @@ name: Android CI
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
   build:
@@ -25,16 +23,17 @@ jobs:
           distribution: temurin
           java-version: 17
 
-      - name: Build Debug APK
-        run: ./gradlew assembleDebug
+      - name: Decode Keystore
+        run: |
+          echo "${{ secrets.SIGNING_KEYSTORE_BASE64 }}" | base64 --decode > app/corestudio.jks
 
       - name: Build Release APK
         run: ./gradlew assembleRelease
 
-      - name: Build AAB (Bundle)
+      - name: Build AAB
         run: ./gradlew bundleRelease
 
-      - name: Upload APKs
+      - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: Corestudio-APK
