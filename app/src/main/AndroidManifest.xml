@@ -12,13 +12,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".MainActivity"
-                  android:exported="true">
+        <!-- Splash screen sebagai launcher -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <!-- Main activity normal -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
 
     </application>
 

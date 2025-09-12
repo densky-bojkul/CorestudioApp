@@ -1,31 +1,26 @@
 package com.nunucore.corestudio;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.ImageView;
+import android.os.Looper;
 
-public class SplashActivity extends Activity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class SplashActivity extends AppCompatActivity {
+
+    private static final int SPLASH_DELAY = 2000; // 2 detik
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        setContentView(R.layout.activity_splash); // ambil dari layout XML
 
-        ImageView logo = findViewById(R.id.splashLogo);
-
-        // Animasi fade-in
-        Animation fadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in);
-        logo.startAnimation(fadeIn);
-
-        // Delay 2.5 detik lalu pindah ke MainActivity
-        new Handler().postDelayed(() -> {
+        // Delay sebelum masuk ke MainActivity
+        new Handler(Looper.getMainLooper()).postDelayed(() -> {
             Intent intent = new Intent(SplashActivity.this, MainActivity.class);
             startActivity(intent);
             finish();
-        }, 2500);
+        }, SPLASH_DELAY);
     }
 }
