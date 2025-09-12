@@ -11,35 +11,47 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Checkout repo
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # Setup JDK 17 (sesuai Android Gradle Plugin requirement)
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: 17
 
+      # Pastikan gradlew bisa dieksekusi
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
+      # Update Gradle Wrapper ke versi 8.6
+      - name: Update Gradle Wrapper to 8.6
+        run: sed -i 's/gradle-.*-all.zip/gradle-8.6-all.zip/g' gradle/wrapper/gradle-wrapper.properties
+
+      # Decode keystore dari secret
       - name: Decode Keystore
         run: echo "$KEYSTORE_BASE64" | base64 -d > app/corestudio.jks
         env:
           KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
 
+      # Build Debug APK
       - name: Build Debug APK
         run: ./gradlew assembleDebug
 
+      # Build Release AAB
       - name: Build Release AAB
         run: ./gradlew bundleRelease
 
+      # Upload Debug APK sebagai artifact
       - name: Upload Debug APK
         uses: actions/upload-artifact@v4
         with:
           name: Corestudio-APK
           path: app/build/outputs/apk/debug/app-debug.apk
 
+      # Upload Release AAB sebagai artifact
       - name: Upload Release AAB
         uses: actions/upload-artifact@v4
         with:
