@@ -3,8 +3,7 @@
     <style name="Theme.Splash" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@android:color/black</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/corestudio_icon</item>
-        <!-- Matikan animasi lingkaran default -->
-        <item name="windowSplashScreenAnimationDuration">0</item>
+        <item name="windowSplashScreenAnimationDuration">2000</item>
         <item name="postSplashScreenTheme">@style/AppTheme</item>
     </style>
 
