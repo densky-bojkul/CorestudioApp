@@ -1,13 +1,7 @@
-<resources>
-
-    <!-- Theme utama aplikasi -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Tambahin warna global kalau perlu -->
-    </style>
-
-    <!-- Splash pakai AppCompat (untuk Android < 12) -->
-    <style name="Theme.Splash" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:windowBackground">@color/black</item>
-    </style>
-
-</resources>
+<style name="Theme.Splash" parent="Theme.SplashScreen">
+    <item name="windowSplashScreenBackground">@android:color/black</item>
+    <!-- Matikan logo default -->
+    <item name="windowSplashScreenAnimatedIcon">@null</item>
+    <!-- Pindah ke tema utama setelah selesai -->
+    <item name="postSplashScreenTheme">@style/AppTheme</item>
+</style>
