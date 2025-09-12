@@ -1,13 +1,11 @@
 <resources>
-
-    <!-- Theme utama aplikasi -->
+    <!-- Theme utama -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Sesuaikan jika perlu -->
+        <item name="android:windowBackground">@color/black</item>
     </style>
 
-    <!-- Theme khusus Splash -->
-    <style name="Theme.Splash" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:windowBackground">@drawable/splash_full</item>
+    <!-- Theme khusus splash (cuma buat SplashActivity) -->
+    <style name="Theme.Splash" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@android:color/black</item>
     </style>
-
 </resources>
