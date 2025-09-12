@@ -5,7 +5,6 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-  workflow_dispatch:
 
 jobs:
   build:
@@ -15,43 +14,34 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup JDK 17
+      - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: 17
 
-      - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v3
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
 
-      # 🔹 Decode Keystore (jika release)
       - name: Decode Keystore
-        if: github.event_name != 'pull_request'
-        run: |
-          echo "$KEYSTORE_BASE64" | base64 -d > app/corestudio-compat.jks
+        run: echo "$KEYSTORE_BASE64" | base64 -d > app/corestudio.jks
         env:
           KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
 
-      # 🔹 Build Debug APK
       - name: Build Debug APK
         run: ./gradlew assembleDebug
+
+      - name: Build Release AAB
+        run: ./gradlew bundleRelease
 
       - name: Upload Debug APK
         uses: actions/upload-artifact@v4
         with:
-          name: app-debug
+          name: Corestudio-APK
           path: app/build/outputs/apk/debug/app-debug.apk
-
-      # 🔹 Build Release AAB
-      - name: Build Release AAB
-        run: ./gradlew bundleRelease
-        env:
-          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
-          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
-          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
 
       - name: Upload Release AAB
         uses: actions/upload-artifact@v4
         with:
-          name: app-release
+          name: Corestudio-AAB
           path: app/build/outputs/bundle/release/app-release.aab
