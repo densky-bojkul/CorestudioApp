@@ -1,2 +1,2 @@
-Aplikasi Android untuk https://corearsitek.id <p/>
+Aplikasi Android untuk https://corestudio.id <p/>
 Design and build by Deni Afrizal
