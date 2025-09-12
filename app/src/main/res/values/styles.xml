@@ -1,13 +1,20 @@
 <resources>
-    <!-- Theme utama -->
+
+    <!-- Theme utama aplikasi -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">#000000</item>
-        <item name="colorPrimaryDark">#000000</item>
-        <item name="colorAccent">#FF0000</item>
+        <!-- Bisa tambahin warna / style lain di sini -->
     </style>
 
-    <!-- Splash theme -->
-    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:windowBackground">@android:color/black</item>
+    <!-- Splash Screen Custom -->
+    <style name="Theme.Splash" parent="Theme.SplashScreen">
+        <!-- Background hitam -->
+        <item name="windowSplashScreenBackground">@android:color/black</item>
+        <!-- Logo splash -->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/corestudio_icon</item>
+        <!-- Durasi minimal splash -->
+        <item name="windowSplashScreenAnimationDuration">2000</item>
+        <!-- Setelah splash selesai, pakai theme utama -->
+        <item name="postSplashScreenTheme">@style/AppTheme</item>
     </style>
+
 </resources>
