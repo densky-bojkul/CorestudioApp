@@ -1,3 +1,12 @@
+package com.nunucore.corestudio;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 public class SplashActivity extends AppCompatActivity {
 
     @Override
@@ -5,9 +14,10 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        new Handler().postDelayed(() -> {
+        // Delay 2 detik sebelum pindah ke MainActivity
+        new Handler(Looper.getMainLooper()).postDelayed(() -> {
             startActivity(new Intent(SplashActivity.this, MainActivity.class));
             finish();
-        }, 2000); // 2 detik splash
+        }, 2000);
     }
 }
