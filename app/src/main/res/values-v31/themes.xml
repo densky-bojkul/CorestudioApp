@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Override SplashScreen bawaan Android 12+ -->
-    <style name="Theme.Splash" parent="Theme.Splash">
+
+    <style name="Theme.Splash" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="windowSplashScreenAnimatedIcon">@null</item>
         <item name="windowSplashScreenBackground">@color/red</item>
         <item name="windowSplashScreenAnimationDuration">200</item>
     </style>
+
 </resources>

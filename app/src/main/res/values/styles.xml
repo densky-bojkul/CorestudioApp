@@ -1,11 +1,9 @@
 <resources>
-    <!-- Theme utama -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="android:windowBackground">@color/black</item>
     </style>
 
-    <!-- Theme khusus splash (cuma buat SplashActivity) -->
-    <style name="Theme.Splash" parent="Theme.AppCompat.NoActionBar">
-        <item name="android:windowBackground">@drawable/corestudio_new</item>
+    <style name="Theme.Splash" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
     </style>
 </resources>
