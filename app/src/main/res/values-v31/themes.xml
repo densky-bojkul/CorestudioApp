@@ -3,7 +3,7 @@
 
     <style name="Theme.Splash" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="windowSplashScreenAnimatedIcon">@null</item>
-        <item name="windowSplashScreenBackground">@color/red</item>
+        <item name="windowSplashScreenBackground">@drawable/corestudio_new</item>
         <item name="windowSplashScreenAnimationDuration">200</item>
     </style>
 
