@@ -3,6 +3,7 @@
 
     <style name="Theme.Splash" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="windowSplashScreenAnimatedIcon">@null</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_icon_empty</item>
         <item name="windowSplashScreenBackground">@drawable/splash_background</item>
         <item name="windowSplashScreenAnimationDuration">200</item>
     </style>
