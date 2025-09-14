@@ -6,7 +6,6 @@
 
     <!-- Theme khusus splash (cuma buat SplashActivity) -->
     <style name="Theme.Splash" parent="Theme.AppCompat.NoActionBar">
-        <item name="windowSplashScreenAnimatedIcon">@null</item>
         <item name="android:windowBackground">@drawable/corestudio_new</item>
     </style>
 </resources>
