@@ -1,9 +1,10 @@
 <resources>
-    <!-- Splash Theme untuk Android 12+ -->
-    <style name="Theme.Splash" parent="Theme.Splash">
+    <!-- Splash Theme khusus Android 12+ -->
+    <style name="Theme.Splash" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@drawable/corestudio_splash</item>
         <item name="windowSplashScreenAnimatedIcon">@null</item>
         <item name="windowSplashScreenIconBackgroundColor">@android:color/transparent</item>
         <item name="windowSplashScreenAnimationDuration">0</item>
+        <item name="postSplashScreenTheme">@style/AppTheme</item>
     </style>
 </resources>
