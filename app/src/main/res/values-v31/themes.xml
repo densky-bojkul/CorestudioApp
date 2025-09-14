@@ -1,6 +1,7 @@
 <resources>
-    <style name="Theme.Splash" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="windowSplashScreenBackground">@drawable/corestudio_new</item>
+    <!-- Splash Theme untuk Android 12+ -->
+    <style name="Theme.Splash" parent="Theme.Splash">
+        <item name="windowSplashScreenBackground">@drawable/corestudio_splash</item>
         <item name="windowSplashScreenAnimatedIcon">@null</item>
         <item name="windowSplashScreenIconBackgroundColor">@android:color/transparent</item>
         <item name="windowSplashScreenAnimationDuration">0</item>

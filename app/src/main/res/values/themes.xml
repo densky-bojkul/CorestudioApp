@@ -1,5 +1,6 @@
 <resources>
-    <style name="Theme.Splash" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="android:windowBackground">@drawable/corestudio_new</item>
+    <!-- Splash Theme untuk Android < 12 -->
+    <style name="Theme.Splash" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/corestudio_splash</item>
     </style>
 </resources>
