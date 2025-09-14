@@ -1,6 +1,0 @@
-<resources>
-    <!-- Splash Theme untuk Android < 12 -->
-    <style name="Theme.Splash" parent="Theme.AppCompat.NoActionBar">
-        <item name="android:windowBackground">@drawable/corestudio_splash</item>
-    </style>
-</resources>
