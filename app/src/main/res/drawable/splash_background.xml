@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- Background warna hitam -->
-    <item android:drawable="@android:color/black" />
+    <item android:drawable="@android:color/splash_background" />
 
     <!-- Logo di tengah -->
     <item>

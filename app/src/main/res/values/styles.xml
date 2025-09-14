@@ -1,7 +1,7 @@
 <resources>
     <!-- Theme utama -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:windowBackground">@color/red</item>
+        <item name="android:windowBackground">@color/splash_background</item>
     </style>
 
 </resources>
