@@ -1,6 +1,11 @@
 <resources>
-    <!-- Theme utama aplikasi -->
+    <!-- Theme utama -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowBackground">@color/black</item>
+    </style>
+
+    <!-- Splash khusus Android < 12 -->
+    <style name="Theme.Splash" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/corestudio_splash</item>
     </style>
 </resources>
