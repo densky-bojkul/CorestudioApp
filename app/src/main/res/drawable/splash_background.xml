@@ -7,6 +7,6 @@
     <item>
         <bitmap
             android:gravity="fill"
-            android:src="@drawable/corestudio_new" />
+            android:src="@drawable/corestudio_splash" />
     </item>
 </layer-list>
